@@ -1,0 +1,89 @@
+
+@font-face {
+  font-family: 'Roboto';
+  src: url('./static/fonts/Roboto-Regular.ttf');
+  font-style: normal;
+}
+
+body {
+  font-family: "Roboto";
+  margin: 0;
+}
+
+/* Customize the scrollbar */
+::-webkit-scrollbar {
+  width: 10px; /* Adjust the width of the scrollbar */
+}
+
+/* Customize the track */
+::-webkit-scrollbar-track {
+  background: transparent; /* Set the background color of the track to transparent */
+}
+
+/* Customize the handle */
+::-webkit-scrollbar-thumb {
+  background: #c9c9c9; /* Change the background color of the handle on hover to a darker semi-transparent gray */
+}
+
+/* Customize the handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #0080ff; /* Set the background color of the handle to a semi-transparent gray */
+}
+
+.midmid {
+  display: flex;
+  justify-items: center;
+  align-items: center;
+}
+
+.text-0 {
+  font-size: 0px;
+  line-height: 0px;
+}
+
+.tooltip, .tooltip2 {
+  position: relative;
+}
+
+/* Tooltip text */
+.tooltip::before {
+  content: attr(data-text); /* Use the data-text attribute as the content */
+  min-width: 100px;
+  visibility: hidden; /* Hide by default */
+  background-color: #0080ff;
+  color: #fff;
+  font-size: 0.8em;
+  text-align: center;
+  padding: 5px;
+  border-radius: 5px;
+  opacity: 0.8;
+
+  /* Position the tooltip text */
+  position: absolute;
+  z-index: 1;
+  top: 80%;
+  left: 50%;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover::before {
+  visibility: visible;
+}
+
+.ease {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+.rounded-50 {
+  border-radius: 50%;
+}
+
+.logo {
+  font-size: 40px;
+}
+
+#about {
+ background-image: url(static/image1.jpg);
+ background-size: cover;
+}
