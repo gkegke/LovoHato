@@ -35,7 +35,7 @@ function SpeedOption({ speed, handleSpeedChange }: {
     <div className="mt-2 flex flex-col">
       <Tooltip title="switch every __ seconds" color="green">
         <input
-          className="rounded border border-gray-300 hover:border-blue-500 px-1 text-lg text-gray-700"
+          className="rounded border border-gray-300 hover:border-blue-500 p-1 text-gray-700"
           defaultValue={speed}
           type="number"
           ref={speedInputRef}
