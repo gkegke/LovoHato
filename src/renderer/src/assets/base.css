@@ -1,0 +1,131 @@
+:root {
+  --primary: #000;
+  --secondary: #000;
+  --white: #fff;
+  --black: #000;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('./fonts/Roboto-Medium.ttf') format('truetype'); /* URL to your TTF font file */
+    /* You can include additional font formats (e.g., woff, woff2) for better browser support */
+}
+
+body {
+  font-family: 'Roboto';
+  margin: 0;
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--white) var(--secondary); /* Initial white color */
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--primary);
+  border-radius: 2px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border-radius: 2px;
+}
+
+/* Change scrollbar colors on hover */
+.scroll:hover {
+  scrollbar-color: var(--white) var(--secondary); /* Change to secondary color on hover */
+}
+
+/* Specific styling for Firefox on hover */
+.scroll:hover {
+  scrollbar-color: var(--white) var(--secondary);
+}
+
+.scroll:hover::-webkit-scrollbar-thumb {
+  background-color: var(--secondary);
+  border-radius: 2px;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.white-scrollbar {
+  scrollbar-color: var(--primary) var(--white);
+}
+
+.white-scrollbar::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+.white-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--white);
+  border: 1px solid var(--primary);
+}
+
+.black-scrollbar {
+  scrollbar-color: var(--primary) var(--black);
+}
+
+.black-scrollbar::-webkit-scrollbar-track {
+  background: var(--primary);
+}
+
+.black-scrollbar::-webkit-scrollbar-thumb {
+  background-color: var(--black);
+  border: 1px solid var(--primary);
+}
+
+.ease {
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/*
+* {
+  border: 1px solid red;
+}
+*/
+
+.vertical-text {
+  writing-mode: vertical-rl; /* or vertical-lr */
+}
+
+.about {
+  width: 300px;
+  min-width: 300px;
+}
+
+.about:hover {
+  width: 450px;
+}
+
+.recent_row {
+  width: 200px;
+  min-width: 200px;
+}
+
+.recent_row:hover {
+  width: 300px;
+}
+
+.rounded-50 {
+  border-radius: 50%;
+}
